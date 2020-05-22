@@ -1,5 +1,16 @@
 # README
 
+<p> If you want to go to the about <a href="/about/">Click here </a></p>
+  <p>
+    <%= link_to  "Go to Articles Listing", articles_path %>
+  </p>
+  <p>
+    <%= link_to  "Go to About Page", about_path %>
+  </p>
+
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
