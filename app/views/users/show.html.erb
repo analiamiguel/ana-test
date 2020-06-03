@@ -5,7 +5,11 @@
   <%= link_to 'Edit profile', edit_user_path(@user), class: "btn btn-outline-info" %>
 </div>
 <h2 class= "mt-4 text-center"> Articles</h2>
-
+<div class="digg_pagination pagination justify-content-center mt-4">
+    <%= will_paginate @articles, :container => false %>
+</div>
 <%= render 'articles/articles' %>
 
-
+<div class="digg_pagination pagination justify-content-center mb-4">
+    <%= will_paginate @articles, :container => false %>
+</div>
