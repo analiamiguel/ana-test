@@ -1,9 +1,11 @@
 <h1 class= "mt-4 text-center"> <%= @user.username %>'s profile</h1>
 
 <%= gravatar_for @user, size: 200 %>
-<div class= "mt-4 text-center"> 
-  <%= link_to 'Edit profile', edit_user_path(@user), class: "btn btn-outline-info" %>
-</div>
+<% if logged_in? && @user == current_user %>
+  <div class= "mt-4 text-center"> 
+    <%= link_to 'Edit profile', edit_user_path(@user), class: "btn btn-outline-info" %>
+  </div>
+<% end %>
 <h2 class= "mt-4 text-center"> Articles</h2>
 <div class="digg_pagination pagination justify-content-center mt-4">
     <%= will_paginate @articles, :container => false %>
